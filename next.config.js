@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     env: {
-        PAGE_URL: 'http://localhost:3000',
+        PAGE_URL: 'https://scraping-images-97srqpxcy-webrcost4-gmailcom.vercel.app',
     },
 };
 
