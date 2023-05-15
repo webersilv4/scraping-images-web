@@ -23,7 +23,7 @@ export default function name() {
         e.preventDefault();
 
         if (validator.isURL(url))
-            await axios.post<Array<ISrc>>('http://localhost:3000/api/scraping', {
+            await axios.post<Array<ISrc>>('https://scraping-images-web.vercel.app/api/scraping', {
                 url
             })
                 .then(res=> setDatas(res.data))
