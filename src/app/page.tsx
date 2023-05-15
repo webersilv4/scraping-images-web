@@ -23,11 +23,11 @@ export default function name() {
         e.preventDefault();
 
         if (validator.isURL(url))
-            await axios.post<Array<ISrc>>(`${process.env.PAGE_URL}/api/scraping`, {
+            await axios.post<Array<ISrc>>('https://scrapingdefotos.vercel.app/api/scraping', {
                 url
             })
                 .then(res=> setDatas(res.data))
-                .catch(()=> setError('Desculpe algo deu errado.'));
+                .catch((err)=> console.log(err));
         else
             setError('Você deve definir uma URL válida.');
 
